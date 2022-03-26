@@ -1,8 +1,8 @@
 version: '2.1'
 services:
     jupyter:
-        image: docker-jupyter-extensible:latest
-        restart: 'no'
+        build:
+            context: .
         volumes:
             - ./notebooks:/home/jovyan/notebooks
         ports:
