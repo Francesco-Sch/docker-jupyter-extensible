@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style id="first-ml-dashboard-style">
+<style id="">
 .output {
     font-size: 3rem;
     color:deeppink;
