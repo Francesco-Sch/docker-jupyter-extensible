@@ -32,11 +32,12 @@ RUN set -ex \
     # choose the python packages you need
     'jupytext==1.13.0' \
     'python-slugify[unidecode]==5.0.2' \
-    'ipyvue===1.7.0' \
-    'voila===0.3.4' \
+    'ipyvue>=1.7.0' \
+    'ipyvuetify>=1.8.2' \
+    'voila>=0.3.4' \
     && conda clean --all -f -y \
     # install jupyter lab extensions you need
-    # && jupyter labextension install ... --no-build \
+    && jupyter labextension install jupyter-vuetify --no-build \
     && jupyter lab build --LabApp.token='' -y \
     && jupyter lab clean -y \
     && rm -rf "/home/${NB_USER}/.cache/yarn" \
