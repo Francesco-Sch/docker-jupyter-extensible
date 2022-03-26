@@ -33,10 +33,11 @@ RUN set -ex \
     'jupytext==1.13.0' \
     'python-slugify[unidecode]==5.0.2' \
     'ipyvue===1.7.0' \
+    'voila===0.3.4' \
     && conda clean --all -f -y \
     # install jupyter lab extensions you need
     # && jupyter labextension install ... --no-build \
-    && jupyter lab build -y \
+    && jupyter lab build --LabApp.token='' -y \
     && jupyter lab clean -y \
     && rm -rf "/home/${NB_USER}/.cache/yarn" \
     && rm -rf "/home/${NB_USER}/.node-gyp" \
